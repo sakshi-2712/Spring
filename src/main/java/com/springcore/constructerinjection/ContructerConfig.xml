@@ -8,27 +8,16 @@
   http://springframework.org/schema/context
  http://www.springframework.org/schema/context/spring-context.xsd">
  
- 
- <!-- First bean -->
- 
- <bean class="com.springcore.springcore.Student" name="student1">
- <property name="studentId">
- <value>22344</value>
- </property>
- 
- <property name="studentName">
- <value>Sakshi AHer</value>
- </property>
- 
- <property name="studentAddress">
- <value>Nashik</value>
- </property>
+ <bean class="com.springcore.constructerinjection.Certi" name="cer">
+ <constructor-arg value="android using kotlin" />
  </bean>
  
- <!-- Second bean -->
- <bean class="com.springcore.springcore.Student" name="student2" p:studentId="12345" p:studentName="abc"/>
- 
- 
-   
+<!-- Contructer Injection -->
+<bean class="com.springcore.constructerinjection.Person" name="person">
+ <constructor-arg value="sakshi"/>
+ <constructor-arg value="12"/>
+<constructor-arg ref="cer" />
+
+</bean>
  
 </beans>

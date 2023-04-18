@@ -9,26 +9,11 @@
  http://www.springframework.org/schema/context/spring-context.xsd">
  
  
- <!-- First bean -->
- 
- <bean class="com.springcore.springcore.Student" name="student1">
- <property name="studentId">
- <value>22344</value>
- </property>
- 
- <property name="studentName">
- <value>Sakshi AHer</value>
- </property>
- 
- <property name="studentAddress">
- <value>Nashik</value>
- </property>
+ <bean class="com.springcore.autowired.Address" name="address">
+ <property name="Street" value="Temp Street"/>
+ <property name="city" value="delhi"/>
  </bean>
  
- <!-- Second bean -->
- <bean class="com.springcore.springcore.Student" name="student2" p:studentId="12345" p:studentName="abc"/>
- 
- 
-   
+ <bean class="com.springcore.autowired.A" name="address1" autowire="byName"/>
  
 </beans>

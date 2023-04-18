@@ -11,24 +11,35 @@
  
  <!-- First bean -->
  
- <bean class="com.springcore.springcore.Student" name="student1">
- <property name="studentId">
- <value>22344</value>
+
+ <bean name="emp1" class="com.springcore.collections.Emp">
+ <property name="name" value="radhe"/>
+  <property name ="phones">
+  <list>
+       <value>234567</value>
+       <value>234567</value>
+       <value>76543</value>
+       </list>
+  </property>
+ 
+ <property name="address">
+ <set>
+  <value>DElhi</value>
+  <value>nashik</value>
+  <value>niphad</value>
+ </set>
  </property>
  
- <property name="studentName">
- <value>Sakshi AHer</value>
+ <property name="courses">
+ <map>
+  <entry key="python" value="1month" />
+  <entry key="java" value="2month" />
+  <entry key="cpp" value="3month"/>
+ </map>
  </property>
  
- <property name="studentAddress">
- <value>Nashik</value>
- </property>
+ 
  </bean>
- 
- <!-- Second bean -->
- <bean class="com.springcore.springcore.Student" name="student2" p:studentId="12345" p:studentName="abc"/>
- 
- 
    
  
 </beans>

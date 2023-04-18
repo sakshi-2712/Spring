@@ -9,26 +9,18 @@
  http://www.springframework.org/schema/context/spring-context.xsd">
  
  
- <!-- First bean -->
  
- <bean class="com.springcore.springcore.Student" name="student1">
- <property name="studentId">
- <value>22344</value>
- </property>
- 
- <property name="studentName">
- <value>Sakshi AHer</value>
- </property>
- 
- <property name="studentAddress">
- <value>Nashik</value>
- </property>
+ <bean class="com.springcore.lifecycle.Lifecycle" name="s1" 
+ init-method="init" destroy-method="destroy">
+ <property name="price" value="10"/>
  </bean>
  
- <!-- Second bean -->
- <bean class="com.springcore.springcore.Student" name="student2" p:studentId="12345" p:studentName="abc"/>
+ <bean class="com.springcore.lifecycle.Lifecycle2" name="s2">
+ <property name="price" value="10"/>
+ </bean>
  
- 
-   
+ <bean class="com.springcore.lifecycle.Example" name="s3">
+ <property name="subject" value="maths"/>
+ </bean>
  
 </beans>
